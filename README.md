@@ -1,4 +1,4 @@
-# Mi Agenda Pro v2.6
+# Mi Agenda Pro v2.9
 
 App web instalable (PWA) para agendar turnos. Funciona con y sin internet.
 
@@ -53,6 +53,17 @@ Requisito: **los trabajadores deben agendar desde sus propios dispositivos, y su
 
 **Seguridad:** el enlace de invitación contiene un código secreto del equipo; quien lo tenga puede leer y escribir los turnos. Compártelo solo con tu equipo. Si se filtra, desconecta y vuelve a conectar para generar un código nuevo (no se pueden reutilizar los turnos del código anterior).
 
+## Cierre de caja (pestaña 💰 Caja)
+- Muestra, por día, semana o mes, el **total ingresado** a la aplicación, cuánto está **cobrado** (turnos marcados como pagados) y cuánto está **por cobrar**.
+- **Sumatoria por servicio:** cantidad de turnos, valor y porcentaje de cada servicio (manicure, pedicure, cejas, «Otros»...), con el total general.
+- **Arqueo:** se escribe el efectivo contado en la caja y la app compara contra lo cobrado: «Caja cuadrada ✓», «Sobran $X» o «Faltan $X».
+- Los turnos pendientes se pueden marcar como cobrados desde la misma pantalla para que el arqueo cuadre.
+- **Colilla de cierre:** con «🔒 Cerrar caja e imprimir» se guarda el cierre (con su número consecutivo) y se abre la colilla lista para imprimir en tira de 80 mm: detalle de cada servicio realizado (hora, servicio, clienta, valor y si está pagado), resumen por servicio, **total del día**, cobrado, por cobrar, efectivo contado, diferencia y línea de firma. Se puede quitar el detalle con la casilla «Incluir el detalle de cada servicio». «Ver colilla» muestra una vista previa sin cerrar la caja.
+- Se imprime desde el botón «🖨 Imprimir colilla» (impresoras térmicas o normales, Bluetooth o por el menú de impresión del navegador). También se envía resumida por WhatsApp.
+- **Historial:** los cierres guardados se reimprimen en cualquier momento con «🖨 Reimprimir» (se guardan en este dispositivo).
+- El administrador ve además el total por trabajador. Cada trabajador ve únicamente sus propios ingresos.
+- Para que el arqueo sea exacto, marca como pagado cada turno cuando se cobre (botón «Comprobante» > «Guardar como pagado», o «Cobrado» en la pestaña Caja).
+
 ## Avisos de reservas por enlace
 - Cada usuario tiene su enlace (pestaña Reservas) y un tema privado de avisos (Ajustes > Avisos de reservas).
 - Con la app abierta, el aviso llega solo. Con la app cerrada, instala la app gratuita **ntfy** y suscríbete a tu tema.
@@ -63,7 +74,8 @@ Requisito: **los trabajadores deben agendar desde sus propios dispositivos, y su
 - Al crear o editar un turno, el desplegable de servicios termina en «✏️ Otros». Al elegirla aparecen campos para escribir el nombre del servicio, su duración y su precio en el momento.
 - Marcando «Guardar este servicio en mi lista» queda disponible en el desplegable para próximas veces (también se administra en Ajustes > Servicios).
 - La agenda sigue evitando cruces entre turnos usando la duración escrita.
+- **Costo editable:** el formulario de turno tiene la casilla «💰 Costo del servicio». Al elegir un servicio aparece su costo habitual y el trabajador puede cambiarlo solo para ese turno (cejas, manicure, pedicure, uñas, «Otros»...). Marcando «Usar este costo como el habitual» queda como nuevo costo del servicio. El costo se refleja en la agenda, el total del día y el comprobante.
 
 ## Notas
 - Sin la nube de equipo, los datos viven en el dispositivo. Para pasarlos a otro: Ajustes > Exportar / Importar.
-- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v2.7) para que los dispositivos se actualicen.
+- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v2.10) para que los dispositivos se actualicen.
