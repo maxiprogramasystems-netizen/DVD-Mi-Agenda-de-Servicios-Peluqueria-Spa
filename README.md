@@ -1,4 +1,4 @@
-# Mi Agenda Pro v2.9
+# Mi Agenda Pro v3.0
 
 App web instalable (PWA) para agendar turnos. Funciona con y sin internet.
 
@@ -53,6 +53,17 @@ Requisito: **los trabajadores deben agendar desde sus propios dispositivos, y su
 
 **Seguridad:** el enlace de invitación contiene un código secreto del equipo; quien lo tenga puede leer y escribir los turnos. Compártelo solo con tu equipo. Si se filtra, desconecta y vuelve a conectar para generar un código nuevo (no se pueden reutilizar los turnos del código anterior).
 
+## Finalizar turnos y panel de clientes (novedad v3.0)
+- **Botón «✔ Finalizar»** en cada turno de la Agenda: pregunta «¿fue atendida satisfactoriamente?» y, si el turno aún no está pagado, ofrece marcarlo también como cobrado. El turno queda con la etiqueta «Atendido ✓» y borde verde. Si te equivocas, «↩ Reabrir» lo devuelve a pendiente.
+- **Panel de clientes** (arriba de la Agenda y en la pestaña Caja): total de clientes, atendidos y pendientes, con barra de avance. En la Agenda es del día elegido; en Caja es por día, semana o mes. Cada trabajador ve únicamente sus propios clientes; el administrador ve los del equipo.
+- Los turnos cancelados («No asistirá») no cuentan como clientes.
+
+## Ingresos, gastos y ganancia neta (novedad v3.0, pestaña 💰 Caja)
+- **Ingresos totales:** suma de todos los turnos agendados del periodo. **Ingresos de atendidos:** solo los turnos finalizados. **Por atender:** la diferencia.
+- **Ganancia neta = ingresos de atendidos − gastos del periodo.** Se muestra en verde si es positiva y en rojo si es negativa.
+- **Gastos del negocio:** botón «+ Gasto» para registrar insumos, arriendo, transporte, servicios públicos, publicidad u otros, con descripción, valor y fecha. Se pueden borrar con ✕. Solo los ve el administrador; los trabajadores ven sus ingresos, pero no la ganancia neta.
+- Los gastos se guardan en el dispositivo del administrador y se incluyen en Ajustes > Exportar / Importar. La colilla de cierre muestra clientes atendidos, gastos y ganancia neta.
+
 ## Cierre de caja (pestaña 💰 Caja)
 - Muestra, por día, semana o mes, el **total ingresado** a la aplicación, cuánto está **cobrado** (turnos marcados como pagados) y cuánto está **por cobrar**.
 - **Sumatoria por servicio:** cantidad de turnos, valor y porcentaje de cada servicio (manicure, pedicure, cejas, «Otros»...), con el total general.
@@ -78,4 +89,4 @@ Requisito: **los trabajadores deben agendar desde sus propios dispositivos, y su
 
 ## Notas
 - Sin la nube de equipo, los datos viven en el dispositivo. Para pasarlos a otro: Ajustes > Exportar / Importar.
-- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v2.10) para que los dispositivos se actualicen.
+- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v3.1) para que los dispositivos se actualicen.
