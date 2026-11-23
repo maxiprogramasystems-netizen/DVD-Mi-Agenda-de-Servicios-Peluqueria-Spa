@@ -1,6 +1,14 @@
-# Mi Agenda Pro v3.0
+# Mi Agenda Pro v3.1
 
 App web instalable (PWA) para agendar turnos. Funciona con y sin internet.
+
+## Novedades v3.1
+- **Botón Agenda con la fecha real:** el ícono del menú es un mini calendario que muestra el mes y el día de hoy (por ejemplo «nov 23»). Se actualiza solo a medianoche y cuando vuelves a abrir la app. Si estabas viendo «hoy», la agenda avanza al nuevo día; si estabas viendo otro día, no se mueve.
+- **Tocar «Agenda» estando en Agenda te devuelve a hoy.** Cuando miras otro día aparece el botón dorado «Volver a hoy».
+- **Selector de día:** al tocar la fecha de la Agenda se abre el calendario del teléfono para saltar a cualquier día. La fecha se escribe con la primera letra en mayúscula («Domingo, 22 de noviembre»).
+- **Menú inferior en relieve:** botones con brillo, borde con grosor y efecto de hundirse al presionar. El botón activo se ve rosa brillante.
+- **Clientes editable:** cada tarjeta tiene un botón con lápiz (✏️) para cambiar nombre, WhatsApp y una nota (alergias, gustos, recordatorios). El nombre y el teléfono se actualizan en todos los turnos de esa clienta que puedes editar; cada trabajador edita solo sus clientas y el administrador las del equipo. La nota queda en el dispositivo y se incluye en Ajustes > Exportar / Importar. El botón verde de WhatsApp se mantiene igual.
+- **Saludo de bienvenida:** el encabezado dice «Buenos días / Buenas tardes / Buenas noches y bienvenido/a, nombre». La vista previa del enlace (por ejemplo en WhatsApp) también lleva un mensaje de bienvenida. La dirección web de la vista previa la define GitHub Pages y no se puede ocultar desde la app.
 
 ## Subir a GitHub y publicar
 1. Crea un repositorio nuevo en github.com (por ejemplo `mi-agenda`).
@@ -53,12 +61,12 @@ Requisito: **los trabajadores deben agendar desde sus propios dispositivos, y su
 
 **Seguridad:** el enlace de invitación contiene un código secreto del equipo; quien lo tenga puede leer y escribir los turnos. Compártelo solo con tu equipo. Si se filtra, desconecta y vuelve a conectar para generar un código nuevo (no se pueden reutilizar los turnos del código anterior).
 
-## Finalizar turnos y panel de clientes (novedad v3.0)
+## Finalizar turnos y panel de clientes
 - **Botón «✔ Finalizar»** en cada turno de la Agenda: pregunta «¿fue atendida satisfactoriamente?» y, si el turno aún no está pagado, ofrece marcarlo también como cobrado. El turno queda con la etiqueta «Atendido ✓» y borde verde. Si te equivocas, «↩ Reabrir» lo devuelve a pendiente.
 - **Panel de clientes** (arriba de la Agenda y en la pestaña Caja): total de clientes, atendidos y pendientes, con barra de avance. En la Agenda es del día elegido; en Caja es por día, semana o mes. Cada trabajador ve únicamente sus propios clientes; el administrador ve los del equipo.
 - Los turnos cancelados («No asistirá») no cuentan como clientes.
 
-## Ingresos, gastos y ganancia neta (novedad v3.0, pestaña 💰 Caja)
+## Ingresos, gastos y ganancia neta (pestaña 💰 Caja)
 - **Ingresos totales:** suma de todos los turnos agendados del periodo. **Ingresos de atendidos:** solo los turnos finalizados. **Por atender:** la diferencia.
 - **Ganancia neta = ingresos de atendidos − gastos del periodo.** Se muestra en verde si es positiva y en rojo si es negativa.
 - **Gastos del negocio:** botón «+ Gasto» para registrar insumos, arriendo, transporte, servicios públicos, publicidad u otros, con descripción, valor y fecha. Se pueden borrar con ✕. Solo los ve el administrador; los trabajadores ven sus ingresos, pero no la ganancia neta.
@@ -89,4 +97,4 @@ Requisito: **los trabajadores deben agendar desde sus propios dispositivos, y su
 
 ## Notas
 - Sin la nube de equipo, los datos viven en el dispositivo. Para pasarlos a otro: Ajustes > Exportar / Importar.
-- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v3.1) para que los dispositivos se actualicen.
+- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v3.2) para que los dispositivos se actualicen.
