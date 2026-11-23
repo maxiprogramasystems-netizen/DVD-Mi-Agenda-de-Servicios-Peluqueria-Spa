@@ -1,6 +1,12 @@
-# Mi Agenda Pro v3.1
+# Mi Agenda Pro v3.2
 
 App web instalable (PWA) para agendar turnos. Funciona con y sin internet.
+
+## Novedades v3.2
+- **Ventana de PIN propia con saludo:** al entrar a una cuenta con PIN ya no sale el cuadro del navegador (que mostraba la dirección del sitio y dejaba ver el PIN). Ahora aparece «¡Bienvenido/a, nombre!» con el logo del negocio, el PIN se escribe con puntos, el teclado es numérico y hay mensajes claros: «Escribe tu PIN.» y «PIN incorrecto. Inténtalo de nuevo.». También funciona la tecla Entrar del teclado.
+- **Borrar gasto con ventana propia:** «¿Borrar este gasto?» con «Cancelar» y «Sí, borrar», sin la dirección del sitio.
+- La app ya no usa ningún cuadro nativo del navegador. La dirección todavía se ve en la barra superior si abres la app desde Chrome en lugar de la instalada, y en la vista previa del enlace en WhatsApp; para cambiarla hay que renombrar el repositorio o usar un dominio propio.
+- Los PIN ya guardados siguen funcionando igual.
 
 ## Novedades v3.1
 - **Botón Agenda con la fecha real:** el ícono del menú es un mini calendario que muestra el mes y el día de hoy (por ejemplo «nov 23»). Se actualiza solo a medianoche y cuando vuelves a abrir la app. Si estabas viendo «hoy», la agenda avanza al nuevo día; si estabas viendo otro día, no se mueve.
@@ -8,7 +14,7 @@ App web instalable (PWA) para agendar turnos. Funciona con y sin internet.
 - **Selector de día:** al tocar la fecha de la Agenda se abre el calendario del teléfono para saltar a cualquier día. La fecha se escribe con la primera letra en mayúscula («Domingo, 22 de noviembre»).
 - **Menú inferior en relieve:** botones con brillo, borde con grosor y efecto de hundirse al presionar. El botón activo se ve rosa brillante.
 - **Clientes editable:** cada tarjeta tiene un botón con lápiz (✏️) para cambiar nombre, WhatsApp y una nota (alergias, gustos, recordatorios). El nombre y el teléfono se actualizan en todos los turnos de esa clienta que puedes editar; cada trabajador edita solo sus clientas y el administrador las del equipo. La nota queda en el dispositivo y se incluye en Ajustes > Exportar / Importar. El botón verde de WhatsApp se mantiene igual.
-- **Saludo de bienvenida:** el encabezado dice «Buenos días / Buenas tardes / Buenas noches y bienvenido/a, nombre». La vista previa del enlace (por ejemplo en WhatsApp) también lleva un mensaje de bienvenida. La dirección web de la vista previa la define GitHub Pages y no se puede ocultar desde la app.
+- **Saludo de bienvenida:** el encabezado dice «Buenos días / Buenas tardes / Buenas noches y bienvenido/a, nombre». La vista previa del enlace (por ejemplo en WhatsApp) también lleva un mensaje de bienvenida. La dirección web de la vista previa la define GitHub Pages.
 
 ## Subir a GitHub y publicar
 1. Crea un repositorio nuevo en github.com (por ejemplo `mi-agenda`).
@@ -97,4 +103,4 @@ Requisito: **los trabajadores deben agendar desde sus propios dispositivos, y su
 
 ## Notas
 - Sin la nube de equipo, los datos viven en el dispositivo. Para pasarlos a otro: Ajustes > Exportar / Importar.
-- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v3.2) para que los dispositivos se actualicen.
+- Al subir cambios, cambia `CACHE` en sw.js (ej. mi-agenda-pro-v3.3) para que los dispositivos se actualicen.
